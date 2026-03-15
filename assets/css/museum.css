@@ -1,0 +1,255 @@
+/* ================= ROOT & RESET ================= */
+:root {
+  --primary: #A71836;
+  --primary-soft: rgba(167, 24, 54, 0.12);
+  --dark: #1f2937;
+  --bg-soft: #a718370d;
+  --muted: #6b7280;
+  --bg: #f4f7fb;
+  --card-radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: var(--bg-soft);
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    /* Use one of the high quality vertical HDR images as the hero background */
+    background: url('assets/IMG_20260224_123208929_HDR_PORTRAIT.jpg') no-repeat center center/cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to right,
+    rgba(69, 10, 10, 0.9) 0%,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(69, 10, 10, 0.9) 100%
+  );
+    z-index: 1;
+}
+
+.z-3 { z-index: 3 !important; }
+
+/* Typography */
+.main-title {
+      font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    background: linear-gradient(to bottom, #ffffff 40%, #ff5252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+}
+
+
+.main-description {
+    max-width: 650px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    color: var(--primary);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.museum-text {
+    font-family: "Inter", sans-serif;
+}
+
+/* Buttons */
+.btn-menu {
+    background-color: transparent;
+    color: #fff!important;
+    border: 2px solid rgba(255, 255, 255, 0.8)!important;
+    transition: all 0.4s ease-in-out!important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #A71836 0%, #A71836 100%) !important;
+    border-color: #A71836 !important;
+    color: #fff !important;
+    box-shadow: 0 8px 15px rgba(230, 74, 25, 0.4) !important;
+}
+
+/* ================= INTERACTIVE GALLERY (BENTO GRID) ================= */
+.gallery-section {
+    background-color: #f4f4f4;
+    position: relative;
+    padding: 60px 0;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    grid-auto-flow: dense; /* Fills blank gaps automatically */
+    gap: 12px;
+}
+
+/* Span modifiers */
+.gallery-item.span-wide {
+    grid-column: span 2;
+}
+
+.gallery-item.span-tall {
+    grid-row: span 2;
+}
+
+.gallery-item.span-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #111;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Dark red gradient overlay on hover */
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(167, 24, 54, 0.75) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4), 0 0 0 2px rgba(167,24,54,0.4);
+    z-index: 2;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* ================= SCROLL REVEAL ANIMATIONS ================= */
+/* Default hidden state before reveal */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal[data-dir="left"]  { transform: translateX(-50px); }
+.reveal[data-dir="right"] { transform: translateX(50px); }
+.reveal[data-dir="up"]    { transform: translateY(50px); }
+
+/* Visible state triggered by IntersectionObserver */
+.reveal.visible {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+}
+
+/* ================= ARTIFACT INTRO CARDS ================= */
+.artifact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.artifact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
+
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+    }
+    /* Constrain spans on tablet */
+    .gallery-item.span-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 90px 15px 60px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: clamp(2.5rem, 9vw, 4rem);
+        line-height: 0.95;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .main-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    /* Single column on mobile — no spanning */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 55vw;
+        gap: 10px;
+    }
+    
+    .gallery-item.span-wide,
+    .gallery-item.span-tall,
+    .gallery-item.span-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

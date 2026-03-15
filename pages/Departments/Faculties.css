@@ -105,7 +105,7 @@ body {
   }
 }
 .con{
-    padding: 10px 100px;
+    padding: 10px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +124,7 @@ body {
 .desc{
   font-size: 20px;
   line-height: 1.7;
-  max-width: 800px;
+  max-width: 70vw;
   text-align: justify;
   margin-bottom: 50px;
 }
@@ -158,9 +158,10 @@ background-image:
   
   .faculty-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     gap: 20px;
-    width: 100%;
+    max-width: 70vw;
+    margin: 0 auto;
   }
 
     .faculty-card {
@@ -176,7 +177,7 @@ background-image:
       gap: 20px;
       align-items: center;
       transition: 0.3s;
-      justify-content: space-between;
+      justify-content: space-evenly;
       opacity: 1;
       transform: translateY(15px);
       img{
@@ -200,7 +201,6 @@ background-image:
       flex-direction: column;
       justify-content: start;
       align-items: start;
-      margin-top: -15px;
       line-height: 0.6;
       h4{
         font-size: 20px;
@@ -228,11 +228,12 @@ background-image:
       }
       .personal-details{
         margin-top: 10px;
-        padding-top: 10px;
+        padding: 10px 0;
         font-size: 16px;
             margin-bottom: 15px;
         width: 100%;
         line-height: 1;
+        text-align: justify;
         border-top: 2px solid #fff;
         border-bottom: 2px solid #fff;
       }

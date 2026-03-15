@@ -1,0 +1,188 @@
+/* =====================================
+   Seats Offered Page Styles 
+   ===================================== */
+
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(69, 10, 10, 0.8) 0%,
+            rgba(0, 0, 0, 0.75) 40%,
+            rgba(69, 10, 10, 0.8) 100%);
+    z-index: 1;
+}
+
+.z-3 {
+    z-index: 3 !important;
+}
+
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.5;
+    background: linear-gradient(to bottom, #ffffff 40%, #ff5252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.main-description {
+    max-width: 700px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+}
+
+/* Hero Buttons */
+.btn-menu {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 12px 30px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #a71836 0%, #a71844 100%) !important;
+    border-color: #a71836;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(167, 24, 54, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Tabs Styling */
+.nav-pills-premium {
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.nav-pills-premium .nav-link {
+    background: #fff;
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.nav-pills-premium .nav-link.active {
+    background: linear-gradient(135deg, #a71836 0%, #7d1228 100%);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(167, 24, 54, 0.3);
+}
+
+/* Grid & Tables */
+.seats-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
+}
+
+.card-header-bar {
+    background: linear-gradient(135deg, #a71836 0%, #450a0a 100%);
+    padding: 20px 30px;
+    color: #fff;
+}
+
+.table-container {
+    padding: 30px;
+}
+
+.table thead th {
+    background: #f8f9fa;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #a71836;
+    padding: 15px;
+}
+
+.table tbody td {
+    padding: 18px 15px;
+    vertical-align: middle;
+}
+
+.seat-count {
+    font-weight: 800;
+    color: #a71836;
+}
+
+.badge-regular {
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-finance {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .nav-pills-premium .nav-link {
+        padding: 10px 15px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .table td, .table th {
+        padding: 12px 8px !important;
+    }
+    
+    .nav-pills-premium {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-pills-premium .nav-link {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
