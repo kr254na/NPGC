@@ -17,7 +17,7 @@ body {
 .hero-section {
     position: relative;
     padding: 120px 0 80px 0;
-    background: url('../images/about/accreditations.jpg') no-repeat center center/cover;
+    background: url('../images/infrastructure-hero.jpg') no-repeat center center/cover;
     min-height: 50vh;
     display: flex;
     align-items: center;
@@ -78,7 +78,7 @@ font-family: 'Arial', sans-serif;
 .facilities-section,
 .infra-cards-section,
 .infra-gallery {
-    padding: 70px 20px;
+    padding: 70px;
 }
 
 .infra-overview {

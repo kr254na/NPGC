@@ -1,0 +1,258 @@
+/* =====================================
+   Admission Schedule Page Styles 
+   ===================================== */
+
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #000; /* Default background */
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(69, 10, 10, 0.8) 0%,
+            rgba(0, 0, 0, 0.75) 40%,
+            rgba(69, 10, 10, 0.8) 100%);
+    z-index: 1;
+}
+
+.z-3 {
+    z-index: 3 !important;
+}
+
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.5; /* Matching user's preference */
+    background: linear-gradient(to bottom, #ffffff 40%, #ff5252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.main-description {
+    max-width: 700px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+}
+
+/* Hero Buttons - Matched to thecollege.css */
+.btn-menu {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #a71836 0%, #a71844 100%) !important;
+    border-color: #a71836;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(167, 24, 54, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Section Styles */
+.schedule-section {
+    padding: 80px 0;
+    background: #fdfdfd;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sub-heading {
+    display: block;
+    color: #a71836;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+.heading-line {
+    width: 60px;
+    height: 4px;
+    background: #a71836;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Schedule Card */
+.schedule-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+.schedule-table-container {
+    padding: 40px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: #f8f9fa;
+    border-bottom: 2px solid #a71836;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+
+.table tbody td {
+    padding: 20px 15px;
+    vertical-align: middle;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-tentative {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.status-announced {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+/* Notes Section */
+.glass-note {
+    background: rgba(167, 24, 54, 0.03);
+    border-left: 5px solid #a71836;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.glass-note h4 {
+    color: #a71836;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Apply CTA Section */
+.apply-cta {
+    background: linear-gradient(135deg, #a71836 0%, #1a1a1a 100%);
+    padding: 60px 0;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+
+.btn-premium {
+    background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+    color: #a71836;
+    font-weight: 700;
+    padding: 16px 45px;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn-premium:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    color: #8b122c;
+}
+
+@media (max-width: 992px) {
+    .schedule-table-container {
+        padding: 15px;
+    }
+
+    .table {
+        font-size: 0.8rem; /* Smaller font for mobile */
+    }
+
+    .table td, .table th {
+        padding: 12px 8px !important;
+    }
+
+    .status-badge {
+        padding: 4px 8px;
+        font-size: 0.65rem;
+    }
+
+    /* Fixed Button Wrapping */
+    .btn-premium {
+        padding: 14px 25px;
+        font-size: 0.85rem;
+        width: auto;
+        white-space: nowrap; /* Prevent wrapping to two lines */
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .table {
+        font-size: 0.75rem;
+    }
+
+    .table td, .table th {
+        padding: 10px 5px !important;
+    }
+
+    .btn-premium {
+        padding: 12px 20px;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+}

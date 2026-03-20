@@ -1,0 +1,421 @@
+/* ==========================================================================
+   RESEARCH & PUBLICATION CSS - MODULAR STANDALONE
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* HERO */
+.hero-section {
+    position: relative;
+    padding: 100px 0 60px 0;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(69, 10, 10, 0.8), rgba(0, 0, 0, 0.75), rgba(69, 10, 10, 0.8));
+    z-index: 1;
+}
+
+.main-title {
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    background: linear-gradient(to bottom, #fff 30%, #ff1f1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 3;
+    letter-spacing: -3px;
+}
+
+.btn-menu {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #a71836, #a71844) !important;
+    color: #fff;
+    border-color: #a71836;
+    box-shadow: 0 8px 15px rgba(167, 24, 54, 0.4);
+}
+
+.main-description {
+    max-width: 650px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+/* OVERVIEW SECTIONS */
+.college-overview-section {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.overview-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sub-heading {
+    color: #a71836;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    font-size: 2.8rem;
+    color: #a71836;
+    font-weight: 800;
+    margin: 0;
+}
+
+.heading-line {
+    width: 80px;
+    height: 4px;
+    background: #a71836;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* DOMAINS */
+.feature-item {
+    display: flex;
+    gap: 20px;
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    border-bottom-color: #a71836;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: #a71836;
+    color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.feature-text h4 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================================
+   ROADMAP ADVANCED LAYOUT
+   ============================================================ */
+
+.roadmap-gradient-bg {
+    background: linear-gradient(to bottom, #ffffff, #fcfcfc);
+    padding: 50px 0;
+}
+
+.roadmap-wrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+.roadmap-card {
+    position: relative;
+    background: #ffffff;
+    padding: 40px 30px;
+    margin: 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+    border: 1px solid #f0f0f0;
+    height: calc(100% - 30px); /* Fill available height, accounting for margins */
+    display: flex;
+    flex-direction: column;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(167, 24, 54, 0.12);
+    border-color: #a71836;
+}
+
+.step-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8f8f8;
+    color: #a71836;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.badge-active {
+    background: #a71836;
+    color: #ffffff;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: #fdf2f4;
+    color: #a71836;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.icon-active {
+    background: #a71836;
+    color: #ffffff;
+}
+
+.roadmap-card h5 {
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.roadmap-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* THE CONNECTING LINE */
+.connector-line {
+    position: absolute;
+    top: 75px; /* Aligns with the center of the icon-box */
+    right: -20px;
+    width: 40px;
+    height: 2px;
+    background: repeating-linear-gradient(
+        to right,
+        #a71836,
+        #a71836 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    z-index: 1;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 1199px) {
+    /* Adjust line for smaller desktops if needed */
+    .connector-line {
+        right: -15px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    /* 2 Column Layout (col-md-6) */
+    .connector-line {
+        display: none !important; /* Explicitly remove in 2-column layout */
+    }
+    
+    .roadmap-card {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* 1 Column Layout - Re-adding vertical lines for timeline feel */
+    .connector-line {
+        display: block !important;
+        position: absolute;
+        top: auto;
+        bottom: -35px;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: 2px !important;
+        height: 30px !important;
+        background: repeating-linear-gradient(
+            to bottom,
+            #a71836,
+            #a71836 5px,
+            transparent 5px,
+            transparent 10px
+        ) !important;
+    }
+    .roadmap-item:last-child .connector-line {
+        display: none !important;
+    }
+}
+
+/* MENTORS */
+.college-timeline-section {
+    padding: 50px 0;
+}
+
+.mentor-card {
+    border-top: 5px solid #A71836;
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mentor-card:hover {
+    transform: scale(1.03);
+}
+
+.text-accent {
+    color: #a71836 !important;
+}
+
+/* TABLE */
+.custom-table thead {
+    background-color: #A71836;
+    color: white;
+}
+
+.btn-link {
+    color: #A71836;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.form-control:focus {
+    border-color: #A71836;
+    box-shadow: 0 0 0 0.25rem rgba(167, 24, 54, 0.25);
+}
+
+/* Custom Table Responsive - No horizontal scroll */
+.table-responsive.no-scrollbar {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+.table-responsive.no-scrollbar .custom-table {
+    width: 100% !important;
+    table-layout: fixed;
+}
+.table-responsive.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.table-responsive.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@media (max-width: 768px) {
+    .table-responsive.no-scrollbar {
+        padding: 0 2px;
+    }
+    /* Target ALL text-containing elements within the table to ensure nothing stays large */
+    .custom-table, 
+    .custom-table th, 
+    .custom-table td, 
+    .custom-table td *, 
+    .custom-table .btn-link {
+        font-size: 0.6rem !important; /* Even smaller to ensure and clear readability of the structure */
+        padding: 6px 1px !important;
+        word-break: break-word; /* More aggressive break to prevent any layout overflow */
+        white-space: normal !important;
+        line-height: 1.1 !important;
+    }
+    
+    .custom-table th:nth-child(2), .custom-table td:nth-child(2) {
+        width: 38%; /* Topic */
+    }
+    .custom-table th:nth-child(1), .custom-table td:nth-child(1) {
+        width: 22%; /* Student Name */
+    }
+    .custom-table th:nth-child(3), .custom-table td:nth-child(3) {
+        width: 20%; /* Journal */
+    }
+    .custom-table th:nth-child(4), .custom-table td:nth-child(4) {
+        width: 10%; /* Year */
+    }
+    .custom-table th:last-child, .custom-table td:last-child {
+        width: 12%; /* Action */
+    }
+    
+    .custom-table th:first-child, .custom-table td:first-child {
+        padding-left: 4px !important;
+    }
+}
+
+
+/* ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

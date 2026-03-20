@@ -47,13 +47,9 @@
       <div class="assessment">
         <div class="row mt-5 text-center">
           <div class="col-12">
-            <h2 class="display-5 fw-bold text-dark text-uppercase">
+            <h2 class="section-header">
               30 Steps Evaluation System
             </h2>
-            <div
-              class="mx-auto bg-danger mt-2"
-              style="width: 60px; height: 4px"
-            ></div>
             <p class="text-muted mt-3">
               A comprehensive evaluation system designed to assess student
               performance through multiple components
@@ -107,7 +103,7 @@
           </div>
         </div>
         <div class="objective-container">
-          <h2 class="objective-heading">
+          <h2 class="section-header">
             Objective & Transparent Examination System
           </h2>
           <ul
@@ -154,13 +150,13 @@
       </div>
       <div class="examination">
         <div class="evaluation">
-          <h2 class="reveal">Semester Examination System</h2>
+          <h2 class="section-header">Semester Examination System</h2>
         </div>
         <div class="row g-4 containers mt-4 mb-5">
           <div class="col-12 col-lg-6">
             <div class="about-card p-4 h-100">
               <img
-                src="../Academics/assets/academic-bg.jpg"
+                src="../assets/images/semester-system.jpg"
                 alt="Academic Library"
                 class="img-fluid rounded mb-4"
               />
@@ -292,7 +288,7 @@
       </div>
       <div class="grade-Evaluation">
         <div class="evaluation">
-          <h2 class="reveal">Grading & Evaluation System</h2>
+          <h2 class="section-header">Grading & Evaluation System</h2>
           <p>
             Performance evaluation includes internal continuous assessment and
             semester-end examinations, converted to grades as per NEP-2020
@@ -300,7 +296,8 @@
           </p>
         </div>
         <div class="gradepoint-conversion">
-          <h2 class="reveal conversion-title">
+          <div class="left-grade">
+          <h2 class="conversion-title">
             Conversion Table for Grade Point Average and Grades
           </h2>
           <ul
@@ -318,7 +315,7 @@
               </button>
             </li>
           </ul>
-          <div class="table-responsive mt-5">
+          <div class="table-responsive">
             <table id="gp-ba" class="table table-hover gradepoint-table">
               <thead class="table-dark">
                 <tr class="rows">
@@ -456,7 +453,8 @@
             </table>
           </div>
         </div>
-        <h2 class="conversion-title reveal">
+        <div class="right-grade">
+        <h2 class="conversion-title">
           Conversion Table for SGPA / CGPA / FGPA into Grade
         </h2>
         <div class="SGPA-conversion">
@@ -563,6 +561,8 @@
               </tbody>
             </table>
           </div>
+          </div>
+        </div>
         </div>
         <div class="calc">
           <div class="reveal sgpa-calc">
@@ -641,14 +641,14 @@
           }
         }
 
-        // Grade Point Conversion tables
-        setupTableToggle(".gradepoint-conversion", {
+        // Grade Point Conversion tables (Left Column)
+        setupTableToggle(".left-grade", {
           0: document.getElementById("gp-ba"),
           1: document.getElementById("gp-bba"),
         });
 
-        // SGPA Conversion tables
-        setupTableToggle(".SGPA-conversion", {
+        // SGPA Conversion tables (Right Column)
+        setupTableToggle(".right-grade", {
           0: document.getElementById("sgpa-ba"),
           1: document.getElementById("sgpa-bba"),
         });
@@ -658,13 +658,13 @@
 
           /* Section headers */
           gsap.utils.toArray(".evaluation").forEach((section) => {
-            gsap.to(section.children, {
+            gsap.from(section.children, {
               scrollTrigger: {
                 trigger: section,
                 start: "top 85%",
               },
-              opacity: 1,
-              y: 0,
+              opacity: 0,
+              y: 40,
               duration: 0.8,
               stagger: 0.15,
               ease: "power2.out",
@@ -677,13 +677,13 @@
               ".points-card.reveal, .item, .cardss, .left-div, .calc > div",
             )
             .forEach((card) => {
-              gsap.to(card, {
+              gsap.from(card, {
                 scrollTrigger: {
                   trigger: card,
                   start: "top 90%",
                 },
-                opacity: 1,
-                y: 0,
+                opacity: 0,
+                y: 40,
                 duration: 0.6,
                 ease: "power2.out",
               });

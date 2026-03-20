@@ -1,0 +1,232 @@
+/* =========================
+   Prospectus Page Styles 
+   ========================= */
+
+.hero-section {
+    position: relative;
+    padding: 120px 0 80px 0;
+    /* background: url('../../assets/hero-campus.jpg') no-repeat center center/cover; */
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient-overlay-v {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(69, 10, 10, 0.8) 0%,
+            rgba(0, 0, 0, 0.75) 40%,
+            rgba(69, 10, 10, 0.8) 100%);
+    z-index: 1;
+}
+
+.z-3 {
+    z-index: 3 !important;
+}
+
+.main-title {
+      font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.5;
+    background: linear-gradient(to bottom, #ffffff 40%, #ff5252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+}
+
+.main-description {
+    max-width: 700px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+}
+
+/* Glassmorphism Sections */
+.info-section {
+    padding: 80px 0;
+    background: #fdfdfd;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sub-heading {
+    display: block;
+    color: #a71836;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+.heading-line {
+    width: 60px;
+    height: 4px;
+    background: #a71836;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.prospectus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.prospectus-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    border-top: 6px solid #a71836;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prospectus-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(167, 24, 54, 0.1);
+}
+
+.prospectus-box i {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: #a71836;
+}
+
+.prospectus-box h4 {
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Redesigned Download Buttons */
+.btn-download {
+    background: linear-gradient(135deg, #a71836 0%, #7d1228 100%);
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 25px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    width: 100%;
+}
+
+.btn-download i {
+    font-size: 1.2rem;
+    color: #fff !important; /* Force white for icons inside buttons */
+    margin-bottom: 0 !important;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #8b122c 0%, #450a0a 100%);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(167, 24, 54, 0.3);
+}
+
+/* Premium Apply Now Button (Matched to hero style) */
+.btn-premium {
+    background: linear-gradient(to bottom, #a71836 0%, #a71844 100%);
+    color: #fff;
+    font-weight: 700;
+    padding: 16px 45px;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(167, 24, 54, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn-premium:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(167, 24, 54, 0.4);
+    color: #fff;
+}
+
+/* Hero Buttons - Matched to thecollege.css */
+.btn-menu {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.btn-menu:hover {
+    background: linear-gradient(to bottom, #a71836 0%, #a71844 100%) !important;
+    border-color: #a71836;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(167, 24, 54, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-hero-outline {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.btn-hero-outline:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .main-heading {
+        font-size: 2rem;
+    }
+}
